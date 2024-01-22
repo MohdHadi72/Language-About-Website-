@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>PHP Website </title>
+    <title>PHP Website Commen </title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Charm:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Homemade+Apple&family=Italianno&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kaushan+Script&family=Merienda:wght@300..900&family=Oranienbaum&family=Rubik+Doodle+Shadow&family=Satisfy&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+<body class="p-3 m-0 border-0 bd-example m-0 border-0 bg-dark text-white">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Mohd Hadi</a>
+            <h1>Mohd Hadi</h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,17 +32,16 @@
                         <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Content</a>
+                        <a class="nav-link" href="content.php">Content</a>
                     </li>
 
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <butt class="btn btn-outline-success" type="submit">Search</butt>
                     </form>
             </div>
         </div>
     </nav>
-
     <section>
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
@@ -87,7 +87,7 @@
                     Choosing the right <a href="">programming</a> language depends on factors like the project requirements, team expertise, performance considerations, and specific use cases.
                     If you have more specific <a href="">questions</a> or if there's a particular aspect you'd like to know more about, feel free to ask!
                 </p>
-                <a href="about.php" class="btn btn-success mt-2">Check More</a>
+                <a href="about.php"><button type="button" class="btn btn-primary">Check More</button></a>
             </div>
         </div>
     </section>
@@ -140,31 +140,30 @@
             <h1 class="text-center display-4">Content Now</h1>
         </div>
         <div class="w-50 m-auto">
-            <form action="UserInfo.php" method="post">
-                <div class="form-group">
+            <form action="UserInfo.php" method="post" class="formText">
+                <div class="form-group my-4">
                     <label for="User">User Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Name">
+                    <input type="text" name="user" class="form-control" placeholder="Enter Name">
                 </div>
-                <div class="form-group">
+                <div class="form-group my-4">
                     <label for="Email">Email Address</label>
-                    <input type="text" class="form-control" placeholder="Enter Email Address">
+                    <input type="text" name="email" class="form-control" placeholder="Enter Email Address">
                 </div>
-                <div class="form-group">
+                <div class="form-group my-4">
                     <label for="mobile">Mobile Number</label>
-                    <input type="text" class="form-control" placeholder="Enter Mobile Number">
+                    <input type="text" name="mobile" class="form-control" placeholder="Enter Mobile Number">
                 </div>
-                <div class="form-group">
-                    <label for="comment">Comment</label>
-                    <textarea class="form-control">
-                    </textarea>
-                </div>
-                <button class="btn btn-primary" type="submit">Submit </button>
+                <button class="btn btn-primary w-100" type="submit">Submit </button>
             </form>
         </div>
 
-
+        <footer class="mt-5 text-center bg-white text-dark ">
+            <h2 class="pt-2">@MohdHadiZaidi</h2>
+            <a href=""><i class="fa-brands fa-instagram" style="color:#cd486b" id="insta"></i></a>
+            <a href=""><i class="fa-brands fa-facebook" style="color: #316FF6;"></i></a>
+            <a href=""><i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i></a>
+        </footer>
     </section>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>

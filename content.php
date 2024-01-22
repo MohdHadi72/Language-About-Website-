@@ -43,44 +43,43 @@
         </div>
     </nav>
 
-
     <div class="jumbotron bg-white text-dark">
-        <h1 class="">Mohd Hadi About:) </h1>
+        <h1 class="">Mohd Hadi Content :) </h1>
         <p>We Have a Web Developer Write The Lots Of Codes :)</p>
     </div>
 
-
-    <section class="textcontainer my-5">
+    <section class="my-5">
         <div class="py-5">
-            <h1 class="text-center display-4">About Us For Language</h1>
+            <h1 class="text-center display-4">Content Now</h1>
+        </div>
+        <div class="w-50 m-auto">
+            <form action="UserInfo.php" method="post" class="formText">
+                <div class="form-group my-4">
+                    <label for="User">User Name</label>
+                    <input type="text" name="user" class="form-control" placeholder="Enter Name">
+                </div>
+                <div class="form-group my-4">
+                    <label for="Email">Email Address</label>
+                    <input type="text" name="email" class="form-control" placeholder="Enter Email Address">
+                </div>
+                <div class="form-group my-4">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="text" name="mobile" class="form-control" placeholder="Enter Mobile Number">
+                </div>
+                <button class="btn btn-primary w-100" type="submit">Submit </button>
+            </form>
         </div>
 
-        <div class="row">
-            <div class=" col-lg-6 col-md-6 col-12">
-                <img src="images/Secure-Coding.gif" alt="">
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-                <h3 class="display-5">I'M Developer Give The Sorce Code</h3>
-                <p class="py-2">Summary, <a href="">HTML</a> provides the structure, <a href="">CSS</a> takes care of the presentation,
-                    and <a href="">JavaScript</a> adds interactivity to create a complete and dynamic web experience.
-                    Together, they form the <a href="">foundation </a>of modern web development.A programming paradigm that treats <a href="">computation</a> as the evaluation of mathematical functions and avoids changing state and mutable data.
-                    Choosing the right <a href="">programming</a> language depends on factors like the project requirements, team expertise, performance considerations, and specific use cases.
-                    If you have more specific <a href="">questions</a> or if there's a particular aspect you'd like to know more about, feel free to ask!
-                </p>
-                <a href="about.php"><button type="button" class="btn btn-primary">Check More</button></a>
-            </div>
-        </div>
+        <footer class="mt-5 text-center bg-white text-dark ">
+            <h2 class="pt-2">@MohdHadiZaidi</h2>
+            <a href=""><i class="fa-brands fa-instagram" style="color:#cd486b" id="insta"></i></a>
+            <a href=""><i class="fa-brands fa-facebook" style="color: #316FF6;"></i></a>
+            <a href=""><i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i></a>
+        </footer>
     </section>
-
-    <footer class="mt-5 text-center bg-white text-dark ">
-        <h2 class="pt-2">@MohdHadiZaidi</h2>
-        <a href=""><i class="fa-brands fa-instagram" style="color:#cd486b" id="insta"></i></a>
-        <a href=""><i class="fa-brands fa-facebook" style="color: #316FF6;"></i></a>
-        <a href=""><i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i></a>
-    </footer>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
 </body>
 
 </html>
