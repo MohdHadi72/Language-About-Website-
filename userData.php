@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>PHP Website </title>
+    <title>PHP Website Common</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -21,7 +21,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav  mb-2 mb-lg-0" style="margin-left:60%">
+                <ul class="navbar-nav mb-2 mb-lg-0" style="margin-left:60%">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
@@ -37,49 +37,78 @@
 
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <butt class="btn btn-outline-success" type="submit">Search</butt>
+                        <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
+                </ul>
             </div>
         </div>
     </nav>
 
     <div class="jumbotron bg-white text-dark mt-5">
-        <h1 class="">Computer languages Content :) </h1>
-        <p>We Have a Web Developer Write The Lots Of Codes :)</p>
+        <h1 class="">UserData Info :) </h1>
+        <p>All User Data :)</p>
     </div>
 
-    <section class="my-5">
-        <div class="py-5">
-            <h1 class="text-center display-4">Content Now</h1>
-        </div>
-        <div class="w-50 m-auto">
-            <form action="UserInfo.php" method="post" class="formText">
-                <div class="form-group my-4">
-                    <label for="User">User Name</label>
-                    <input type="text" name="user" class="form-control" placeholder="Enter Name">
-                </div>
-                <div class="form-group my-4">
-                    <label for="Email">Email Address</label>
-                    <input type="text" name="email" class="form-control" placeholder="Enter Email Address">
-                </div>
-                <div class="form-group my-4">
-                    <label for="mobile">Mobile Number</label>
-                    <input type="text" name="mobile" class="form-control" placeholder="Enter Mobile Number">
-                </div>
-                <button class="btn btn-primary w-100" type="submit">Submit </button>
-            </form>
-        </div>
+    <?php
+    $con = mysqli_connect('localhost', 'root', '', 'userdata') or die("Couldn't Connect");
 
-        <footer class="mt-5 text-center bg-white text-dark ">
-            <h2 class="pt-2">@Computer languages</h2>
-            <a href=""><i class="fa-brands fa-instagram" style="color:#cd486b" id="insta"></i></a>
-            <a href=""><i class="fa-brands fa-facebook" style="color: #316FF6;"></i></a>
-            <a href=""><i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i></a>
-        </footer>
+    if ($con) {
+        // echo "Connected Successfully";
+    } else {
+        echo "Not Connected";
+    }
+
+    mysqli_select_db($con, 'userdata');
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $user = $_POST['user'];
+        $email = $_POST['email'];
+        $mobile = $_POST['mobile'];
+
+        $query = "INSERT INTO languageuserinfodata (user, email, mobile) VALUES ('$user', '$email', '$mobile')";
+        mysqli_query($con, $query);
+    }
+
+    $result = mysqli_query($con, "SELECT * FROM languageuserinfodata");
+
+
+    ?>
+
+    <section class="mt-5">
+        <div class="container">
+            <table class="table table-bordered table-dark">
+                <thead border='1'>
+                    <tr style="text-align: center; border: 3px solid #dee2e6;">
+                        <th> User Name</th>
+                        <th>User Email</th>
+                        <th>Mobile Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td style='border: 1px solid #dee2e6; padding: 0.75rem; text-align: center;'>" . $row['user'] . "</td>";
+                        echo "<td style='border: 1px solid #dee2e6; padding: 0.75rem; text-align: center;'>" . $row['email'] . "</td>";
+                        echo "<td style='border: 1px solid #dee2e6; padding: 0.75rem; text-align: center;'>" . $row['mobile'] . "</td>";
+                        echo "</tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </section>
+
+    <footer class="mt-5 text-center bg-white text-dark">
+        <h2 class="pt-2">@Computer languages</h2>
+        <a href=""><i class="fa-brands fa-instagram" style="color:#cd486b" id="insta"></i></a>
+        <a href=""><i class="fa-brands fa-facebook" style="color: #316FF6;"></i></a>
+        <a href=""><i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i></a>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
+
 
 </html>

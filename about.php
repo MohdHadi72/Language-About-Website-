@@ -16,7 +16,7 @@
 <body class="p-3 m-0 border-0 bd-example m-0 border-0 bg-dark text-white">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container-fluid">
-            <h1>Mohd Hadi</h1>
+            <h1>Computer languages</h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,7 +26,7 @@
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="userData.php">UserInfo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">About</a>
@@ -44,8 +44,8 @@
     </nav>
 
 
-    <div class="jumbotron bg-white text-dark">
-        <h1 class="">Mohd Hadi About:) </h1>
+    <div class="jumbotron bg-white text-dark mt-5">
+        <h1 class="">Computer languages About:) </h1>
         <p>We Have a Web Developer Write The Lots Of Codes :)</p>
     </div>
 
@@ -73,7 +73,7 @@
     </section>
 
     <footer class="mt-5 text-center bg-white text-dark ">
-        <h2 class="pt-2">@MohdHadiZaidi</h2>
+        <h2 class="pt-2">@Computer languages</h2>
         <a href=""><i class="fa-brands fa-instagram" style="color:#cd486b" id="insta"></i></a>
         <a href=""><i class="fa-brands fa-facebook" style="color: #316FF6;"></i></a>
         <a href=""><i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i></a>

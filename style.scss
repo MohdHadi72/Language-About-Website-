@@ -3,13 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Acme", sans-serif;
+    // font-family: "Acme", sans-serif;
     
 }
 
 .carousel-inner{
     width: 100%;
     height: 90vh;
+
+    img{
+        height: 180vh;
+    }
 
     
 }
@@ -18,6 +22,7 @@
         height: 40vh;
         width: 100%;
         border-radius: 8px;
+        // text-align: center;
     }
     a{
    text-decoration: none;   
@@ -33,4 +38,34 @@ button{
 }
 .cards{
     margin-left: 12%;
+}
+
+i{
+    font-size: 23px;
+    border-radius: 50%;
+    margin: 8px 8px;
+
+}
+.formText{
+    background-color: white;
+    color: black;
+    margin: auto;
+    padding: 13px;
+    border-radius: 12px;
+
+    input{
+        border: none;
+        background-color: #dfdbdb;
+    }
+   
+}
+
+.jumbotron{
+    padding: 40px 40px;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: center;
+    h1{
+        font-size: 5rem;
+    }
 }
